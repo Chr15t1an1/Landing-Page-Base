@@ -165,13 +165,15 @@ input[type=text], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #F48102;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 input[type=submit]:hover {
@@ -210,7 +212,7 @@ input[type=submit]:hover {
   font-size: 1.9pc;
   text-align:center;
   padding:10px;
-  max-width: 65%;
+  max-width: 68%;
   float: left;
   margin: 10px;
 }
@@ -257,7 +259,8 @@ input[type=submit]:hover {
   font-size: 3pc;
   text-align:center;
   margin: auto;
- padding-top: 15%;
+  padding-top: 15%;
+  /* height: auto; */
 }
 
 
@@ -275,7 +278,7 @@ input[type=submit]:hover {
 #text_section img {
   float:left;
   margin: 0px 30px 30px 0px;
-  width:416px;
+  max-width: 400px;
 }
 
 
@@ -288,20 +291,78 @@ input[type=submit]:hover {
 }
 
 
+@media only screen and (max-width: 600px) {
+
+#text_section img {
+  max-width: 100%;
+}
+
+#cycle_section{
+  height:600px
+}
+
+}
+
+
+
+
 /*Section 4 */
 
 #convert_section{
   clear:both;
   padding-top:20px;
   margin:15px;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 #convert_section h3{
   font-size: 46px;
+  padding: 0px 15px;
 }
 
 
 
-#convert_section form{
+.site-footer{
+  display:block;
+  float: left;
+  width: 100%;
+}
+
+
+
+
+
+
+.embed-container {position: relative;padding-bottom: 56.25%;height: 0;overflow: hidden;max-width: 100%;} 
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+
+
+
+@media only screen and (min-width: 726px) {
+  #convert_section form{
   font-size: 26px;
+  width: 40%;
+  float: left;
+  padding: 0px 30px;
 }
+
+ #convert_section iframe{
+  max-width: 600px;
+  height: auto;
+  margin: 0px 5%;
+}
+
+ #convert_section iframe{
+  min-height: 340px;
+}
+
+}
+
+
+
+
+
+
