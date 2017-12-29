@@ -495,10 +495,10 @@ Helvetica Neue&#39;, sans-serif !important;
 
   <!-- Internet Explorer Notification -->
   <div class="row">
-    <div id="ieNotif" class="notification" style="display:none;width: 90%; margin:auto; height: auto; border: solid 7px #33afc9; text-align: center; padding: 20px; background-color: rgb(244, 129, 2); color: #fff;"> <!-----><a onclick="hideNotif()"><span class="notif_close" style="float: right;font-size: 25px;"><i class="fa fa-times" aria-hidden="true"></i></span></a>
+    <div id="ieNotif" class="notification" style="display:none;width: 50%;margin: auto;height: auto;border: 7px solid rgb(51, 175, 201);text-align: center;padding: 20px;background-color: rgba(244, 129, 2, 0.61);color: #000;"> <!-----><a onclick="hideNotif()"><span class="notif_close" style="float: right;font-size: 25px;"><i class="fa fa-times" aria-hidden="true"></i></span></a>
       <h3>Dear Internet Explorer User - Important Message </h3>
       <p>Some versions of Internet Explorer are not compatible with our shopping cart software. To ensure full functionality while on our site, please switch to one of our recommended browsers.</p>
-      <a target="_blank" style="color: #fff;background-color: #d9534f;border-color: #d43f3a;" href="https://www.mozilla.org/en-US/firefox/" class="btn btn-danger"><i class="fa fa-firefox" aria-hidden="true"></i> Fire Fox</a> Or <a target="_blank" style="color: #fff;background-color: #5cb85c;border-color: #4cae4c;" href="https://www.google.com/chrome/browser/desktop/index.html" class="btn btn-success"><i class="fa fa-chrome" aria-hidden="true"></i> Google Chrome</a> </div>
+      <a target="_blank" style="color: #fff;background-color: #d9534f;border-color: #d43f3a;" href="https://www.mozilla.org/en-US/firefox/" class="btn btn-danger"><i class="fa fa-firefox" aria-hidden="true"></i> Fire Fox</a> <span id="notif_sub">Or</span> <a target="_blank" style="color: #fff;background-color: #5cb85c;border-color: #4cae4c;" href="https://www.google.com/chrome/browser/desktop/index.html" class="btn btn-success"><i class="fa fa-chrome" aria-hidden="true"></i> Google Chrome</a> </div>
     <hr style="margin-top: 20px;margin-bottom: 20px;border: 0;border-top: 1px solid rgba(238, 238, 238, 0);"/>
   </div>
 
@@ -549,18 +549,18 @@ Having spent time as a loan originator and accidentally committing fraud on his 
 <div id="convert_section">
 <h3>Book Ken Perry</h3>
 
-	<form action="" method="post">
+	<form action="http://localhost:8005/api/form-process/kenSpeakingLp" method="post" id="form_speaking_lp">
     <label for="fname">Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="name" name="name" placeholder="Your name..">
 
     <label for="lname">Company</label>
-    <input type="text" id="lname" name="lastname" placeholder="Achme">
+    <input type="text" id="company" name="company" placeholder="Achme">
 
 		<label for="lname">Phone</label>
-		<input type="text" id="lname" name="lastname" placeholder="Phone Number">
+		<input type="text" id="phone" name="phone" placeholder="Phone Number">
 
 		<label for="lname">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="Contact Email">
+    <input type="text" id="email" name="email" placeholder="Contact Email">
 
     <input onclick="submit_button()" type="submit" value="Submit">
   </form>
@@ -922,8 +922,11 @@ CheckForNotif();
 </noscript>
 
 
-
+<!-- Change the "src" attribute according to your installation path -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
 <script type="text/javascript" src="speaking-lp.js"></script>
+
 
 
 
